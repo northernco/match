@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+    node:
+        build:
+            args:
+                UID: 1000 # Update with your user ID if needed
+
+# Needed if connected to a WireGuard VPN
+#networks:
+#    default:
+#        driver: bridge
+#        driver_opts:
+#            com.docker.network.driver.mtu: 1420
