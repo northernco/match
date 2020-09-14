@@ -1,0 +1,10 @@
+/.idea/
+/docker/
+/node_modules/
+/.editorconfig
+/.sass-lint
+/docker-compose.dev.yml
+/docker-compose.override.yml
+/docker-compose.yml
+/index.html
+/webpack.config.js
