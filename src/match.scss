@@ -1,3 +1,7 @@
-@import 'scss/match.scss';
+@import 'scss/match';
+
+a {
+    text-decoration: underline;
+}
 
 @include \match\apply-reset();
