@@ -10,6 +10,14 @@ Match can be added to a project by running the following:
 yarn add @northern/match
 ```
 
+If using Webpack, you can import and include the reset in your SASS by including the following in your stylesheet:
+
+```scss
+@import '~@northernco/match';
+
+@include \match\apply-reset();
+```
+
 ## Contributing
 
 ### Requirements
