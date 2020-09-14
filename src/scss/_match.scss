@@ -1,0 +1,368 @@
+$\match\base-font-size: 100% !default;
+$\match\base-line-height: 1.15 !default;
+$\match\base-font-family: sans-serif !default;
+$\match\h1-font-size: 2.488rem !default;
+$\match\h2-font-size: 2.074rem !default;
+$\match\h3-font-size: 1.728rem !default;
+$\match\h4-font-size: 1.44rem !default;
+$\match\h5-font-size: 1.2rem !default;
+$\match\h6-font-size: 1rem !default;
+$\match\indent-amount: 20px !default;
+$\match\mark-background-color: #ffff00 !default;
+$\match\mark-text-color: #000000 !default;
+$\match\box-sizing: border-box !default;
+$\match\body-antialiased: true !default;
+
+@mixin \match\apply-reset() {
+    html {
+        line-height: $\match\base-line-height;
+        font-family: $\match\base-font-family;
+        font-size: $\match\base-font-size;
+        box-sizing: $\match\box-sizing;
+        text-size-adjust: 100%;
+        text-decoration-skip-ink: none; // sass-lint:disable-line no-misspelled-properties
+    }
+
+    * {
+        &,
+        &::before,
+        &::after {
+            font-family: inherit;
+            font-size: inherit;
+            box-sizing: inherit;
+        }
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+
+        @if ($\match\body-antialiased) {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    }
+
+    article,
+    aside,
+    footer,
+    header,
+    nav,
+    section {
+        display: block;
+    }
+
+    div,
+    dl,
+    dt,
+    dd,
+    ul,
+    ol,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    pre,
+    form,
+    p,
+    blockquote,
+    figure,
+    th,
+    td {
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: $\match\h1-font-size;
+    }
+
+    h2 {
+        font-size: $\match\h2-font-size;
+    }
+
+    h3 {
+        font-size: $\match\h3-font-size;
+    }
+
+    h4 {
+        font-size: $\match\h4-font-size;
+    }
+
+    h5 {
+        font-size: $\match\h5-font-size;
+    }
+
+    h6 {
+        font-size: $\match\h6-font-size;
+    }
+
+    figcaption,
+    figure,
+    main {
+        display: block;
+    }
+
+    hr {
+        height: 0;
+        overflow: visible;
+        box-sizing: inherit;
+    }
+
+    pre {
+        overflow: auto;
+        font-family: monospace, monospace;
+        font-size: inherit;
+    }
+
+    a {
+        background-color: transparent;
+        text-decoration-skip: objects;
+    }
+
+    abbr {
+        border-bottom: 0;
+        text-decoration: none;
+    }
+
+    b,
+    strong {
+        font-weight: bolder;
+    }
+
+    em,
+    i {
+        line-height: inherit;
+        font-style: italic;
+    }
+
+    code,
+    kbd,
+    samp {
+        margin: 0;
+        font-family: monospace, monospace;
+        font-size: inherit;
+    }
+
+    dfn {
+        font-style: italic;
+    }
+
+    mark {
+        background-color: $\match\mark-background-color;
+        color: $\match\mark-text-color;
+    }
+
+    small {
+        font-size: 80%;
+    }
+
+    sub,
+    sup {
+        position: relative;
+        vertical-align: baseline;
+        line-height: 0;
+        font-size: 75%;
+    }
+
+    sub {
+        bottom: -0.25em;
+    }
+
+    sup {
+        top: -0.5em;
+    }
+
+    ul,
+    ol,
+    dl {
+        margin-left: $\match\indent-amount;
+        list-style-position: outside;
+    }
+
+    audio,
+    video {
+        display: inline-block;
+    }
+
+    audio {
+        &:not([controls]) {
+            display: none;
+            height: 0;
+        }
+    }
+
+    img {
+        display: inline-block;
+        border-style: none;
+        max-width: 100%;
+        height: auto;
+        min-height: 0.1px;
+        vertical-align: middle;
+        -ms-interpolation-mode: bicubic; // sass-lint:disable-line no-misspelled-properties
+    }
+
+    svg {
+        &:not(:root) {
+            overflow: hidden;
+        }
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+        margin: 0;
+        line-height: inherit;
+        font-family: inherit;
+        font-size: 100%;
+    }
+
+    button {
+        overflow: visible;
+    }
+
+    button,
+    select {
+        text-transform: none;
+    }
+
+    select {
+        border-radius: 0;
+        font-family: inherit;
+        box-sizing: inherit;
+    }
+
+    button,
+    [type='button'],
+    [type='reset'],
+    [type='submit'] {
+        border: 0;
+        border-radius: 0;
+        line-height: inherit;
+        font-family: inherit;
+        appearance: button;
+    }
+
+    [type='file'] {
+        &::-webkit-file-upload-button {
+            border: 0;
+            border-radius: 0;
+            line-height: inherit;
+            font-family: inherit;
+            appearance: button;
+        }
+    }
+
+    button,
+    [type='button'],
+    [type='reset'],
+    [type='submit'] {
+        &::-moz-focus-inner {
+            border-style: none;
+            padding: 0;
+        }
+    }
+
+    button,
+    [type='button'],
+    [type='reset'],
+    [type='submit'] {
+        &:-moz-focusring {
+            outline: 1px dotted ButtonText;
+        }
+    }
+
+    fieldset {
+        margin: 0;
+        border: 0;
+        padding: 0;
+    }
+
+    legend {
+        display: table;
+        float: left;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+        white-space: normal;
+        color: inherit;
+        box-sizing: inherit;
+
+        + * {
+            clear: left;
+        }
+    }
+
+    progress {
+        display: inline-block;
+        vertical-align: baseline;
+    }
+
+    textarea {
+        display: block;
+        border-radius: 0;
+        height: auto;
+        overflow: auto;
+        font-family: inherit;
+    }
+
+    [type='checkbox'],
+    [type='radio'] {
+        padding: 0;
+        box-sizing: inherit;
+    }
+
+    [type='number'] {
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            height: auto;
+        }
+    }
+
+    [type='search'] {
+        outline-offset: -2px;
+        appearance: textfield;
+    }
+
+    [type='search'] {
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+    }
+
+    ::-webkit-file-upload-button {
+        font: inherit;
+        -webkit-appearance: button;
+    }
+
+    details,
+    menu {
+        display: block;
+    }
+
+    summary {
+        display: list-item;
+    }
+
+    canvas {
+        display: inline-block;
+    }
+
+    template {
+        display: none;
+    }
+
+    [hidden] {
+        display: none;
+    }
+
+    address {
+        font-style: inherit;
+    }
+}
