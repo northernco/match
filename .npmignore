@@ -1,8 +1,10 @@
 /.idea/
+/dist/index.js
+/dist/index.js.map
 /docker/
 /node_modules/
 /.editorconfig
-/.sass-lint
+/.sass-lint.yml
 /docker-compose.dev.yml
 /docker-compose.override.yml
 /docker-compose.yml
