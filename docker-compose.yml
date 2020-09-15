@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+    node:
+        build:
+            context: ./docker/node
+            args:
+                UID: 1000
+        restart: "no"
+        working_dir: /home/node/app
+        volumes:
+            - ./:/home/node/app

@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+    - 12
+    - 14
+
+before_install:
+    - yarn install
+
+script:
+    - yarn lint
+    - yarn build
+    - git status
+    - has_changes=$(git status --porcelain)
+    - (if [[ -n "${has_changes}" ]]; then echo "ERROR - Compiled files are different than committed."; exit 1; else echo "SUCCESS - No changed files after compiling."; fi)
