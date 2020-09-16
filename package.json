@@ -1,12 +1,16 @@
 {
-  "name": "@northern/match",
+  "name": "@northernco/match",
+  "description": "A CSS reset by [Northern Commerce](https://www.northern.co/).",
   "version": "1.0.0-alpha",
+  "license": "MIT",
   "main": "src/scss/_match.scss",
   "style": "src/scss/_match.scss",
   "sass": "src/scss/_match.scss",
   "author": "Northern Commerce",
   "homepage": "https://github.com/northernco/match",
-  "bugs": "https://github.com/northernco/match/issues",
+  "bugs": {
+    "url": "https://github.com/northernco/match/issues"
+  },
   "devDependencies": {
     "clean-webpack-plugin": "~3.0.0",
     "css-loader": "~4.3.0",
