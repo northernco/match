@@ -1,6 +1,6 @@
 {
   "name": "@northernco/match",
-  "description": "A CSS reset by [Northern Commerce](https://www.northern.co/).",
+  "description": "A CSS reset by Northern Commerce.",
   "version": "1.0.0-alpha",
   "license": "MIT",
   "main": "src/scss/_match.scss",
