@@ -7,7 +7,7 @@ A CSS reset by [Northern Commerce](https://www.northern.co/).
 Match can be added to a project by running the following:
 
 ```bash
-yarn add @northern/match
+yarn add @northernco/match
 ```
 
 If using Webpack, you can import and include the reset in your SASS by including the following in your stylesheet:
