@@ -1,7 +1,7 @@
 {
   "name": "@northernco/match",
   "description": "A CSS reset by Northern Commerce.",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "license": "MIT",
   "main": "src/scss/_match.scss",
   "style": "src/scss/_match.scss",
