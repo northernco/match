@@ -1,5 +1,7 @@
 # Northern Match
 
+[![Node.js CI](https://github.com/northernco/match/actions/workflows/node.js.yml/badge.svg)](https://github.com/northernco/match/actions/workflows/node.js.yml)
+
 A CSS reset by [Northern Commerce](https://www.northern.co/).
 
 ## Getting Started
